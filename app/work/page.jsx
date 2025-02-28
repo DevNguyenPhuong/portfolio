@@ -175,12 +175,6 @@ function Work() {
                         className="object-cover"
                         alt={`Project ${project.name || index + 1}`}
                         loading={index === 0 ? "eager" : "lazy"}
-                        onError={(e) => {
-                          console.error(
-                            `Failed to load image: ${project.image}`
-                          );
-                          e.target.src = "/fallback-image.jpg"; // Provide a fallback image
-                        }}
                       />
                     </div>
                   </div>
