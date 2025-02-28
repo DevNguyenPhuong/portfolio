@@ -76,17 +76,6 @@ const projects = [
     live: "",
     github: "https://github.com/DevNguyenPhuong/virtual-gaming-GSAP-",
   },
-  {
-    num: "05",
-    category: "frontend",
-    title: "Omnifood",
-    description:
-      "Omnifood is an inviting landing page designed for food enthusiasts, featuring a visually appealing layout and seamless navigation. The site highlights a variety of delicious meal options, recipes, and dining experiences.",
-    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascrpit" }],
-    image: "/assets/work/Omnifood.jpg",
-    live: "",
-    github: "https://github.com/DevNguyenPhuong/HTML-CSS",
-  },
 ];
 
 function Work() {
