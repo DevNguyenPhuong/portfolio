@@ -7,8 +7,15 @@ import {
   FaFigma,
   FaJava,
 } from "react-icons/fa";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiPostgresql,
+  SiSpring,
+  SiAntdesign,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -22,11 +29,11 @@ import { TooltipContent } from "@radix-ui/react-tooltip";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipiscing elit facilisis laoreet mus, tortor condimentum in litora.",
+    "I am a passionate and dedicated professional with a background in Information Technology. I thrive on challenges and continuously seek opportunities to learn and grow. With strong problem-solving skills and a collaborative spirit, I enjoy working in dynamic environments where I can contribute to innovative projects and make a positive impact.",
   info: [
     { fieldName: "Name", fieldValue: "Anh Phuong" },
     { fieldName: "Phone", fieldValue: "(+84) 369 421 105" },
-    { fieldName: "Experience", fieldValue: "0+ years" },
+    { fieldName: "Experience", fieldValue: "1+ years" },
     { fieldName: "Languages", fieldValue: "Vietnam, English" },
     { fieldName: "Nationality", fieldValue: "Viet Nam" },
 
@@ -38,43 +45,8 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipiscing, elit lobortis augue porta. Placerat ut magna suspendisse iaculis habitasse molestie class proin hendrerit.",
+    "I have a diverse background in software development, specializing in building responsive web applications and optimizing user experiences. My expertise lies in JavaScript frameworks like React and Next.js, allowing me to create dynamic, high-performance applications.",
   items: [
-    {
-      company: "Iritech Inc.",
-      position: "Tester",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Iritech Inc.",
-      position: "Tester",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Iritech Inc.",
-      position: "Tester",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Iritech Inc.",
-      position: "Tester",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Iritech Inc.",
-      position: "Tester",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Iritech Inc.",
-      position: "Tester",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Iritech Inc.",
-      position: "Tester",
-      duration: "2024 - 2025",
-    },
     {
       company: "Iritech Inc.",
       position: "Tester",
@@ -87,12 +59,12 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipiscing, elit lobortis augue porta. Placerat ut magna suspendisse iaculis habitasse molestie class proin hendrerit.",
+    "I graduated from Ho Chi Minh City University of Transport with a GPA of 3.5. During my studies, I developed a strong foundation in transportation engineering and project management. My coursework included extensive projects that honed my analytical and problem-solving skills, preparing me for real-world challenges in the industry.",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "The Ultimate ReactJS/NextJs Course",
-      duration: "2023 - 2024",
+      institution: "Ho Chi Minh city University of Transport",
+      degree: "Bachelor of Information Technology",
+      duration: "2021 - 2024",
     },
     {
       institution: "Online Course Platform",
@@ -101,21 +73,16 @@ const education = {
     },
     {
       institution: "Online Course Platform",
-      degree: "The Ultimate ReactJS/NextJs Course",
-      duration: "2023 - 2024",
-    },
-    {
-      institution: "Online Course Platform",
-      degree: "The Ultimate ReactJS/NextJs Course",
-      duration: "2023 - 2024",
+      degree: "Build Responsive Real-World Websites with HTML and CSS",
+      duration: "2021 - 2022",
     },
   ],
 };
 
 const skills = {
-  title: "my skills",
+  title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipiscing, elit lobortis augue porta. Placerat ut magna suspendisse.",
+    "I possess a diverse set of skills that enhance my ability to contribute effectively in various projects. My expertise includes both back-end and front-end development",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -130,10 +97,6 @@ const skills = {
       name: "javascript",
     },
     {
-      icon: <FaJava />,
-      name: "java",
-    },
-    {
       icon: <FaReact />,
       name: "react.js",
     },
@@ -142,12 +105,32 @@ const skills = {
       name: "next.js",
     },
     {
+      icon: <TbBrandFramerMotion />,
+      name: "Framer motion",
+    },
+    {
       icon: <SiTailwindcss />,
       name: "tailwind.css",
     },
     {
+      icon: <SiAntdesign />,
+      name: "ant design",
+    },
+    {
       icon: <FaFigma />,
       name: "figma",
+    },
+    {
+      icon: <FaJava />,
+      name: "java",
+    },
+    {
+      icon: <SiSpring />,
+      name: "Spring",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "postgresSQL",
     },
   ],
 };
@@ -208,14 +191,14 @@ function Resume() {
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1  gap-[30px]">
                     {education.items.map((item, index) => (
                       <li
                         key={index}
                         className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-lg max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="text-lg max-w-full min-h-[60px] text-center lg:text-left">
                           {item.degree}
                         </h3>
                         <div className="flex items-center gap-3">

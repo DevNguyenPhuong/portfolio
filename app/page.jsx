@@ -1,11 +1,24 @@
+"use client";
+
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import Stats from "@/components/ui/Stats";
-import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
+  const handleDownload = () => {
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = "/assets/resume/NguyenAnhPhuong_FullStackDev.pdf"; // Make sure this path is correct
+    link.download = "NguyenAnhPhuong_FullStackDev.pdf";
+
+    // Append to the body, click it, and then remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -25,13 +38,9 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
-                download
+                onClick={handleDownload}
               >
-                <span>
-                  <Link href="https://www.overleaf.com/read/cshqchkdbxdf#21b564">
-                    Download CV
-                  </Link>
-                </span>
+                <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">

@@ -18,47 +18,74 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "Project 1",
+    category: "fullstack",
+    title: "Library management",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipiscing elit malesuada eu nisi ullamcorper, varius dignissim cum suscipit. Sollicitudin torquent vulputate",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }],
-    image: "/assets/work/thumb2.png",
+      "The Library Management system is designed to streamline the process of managing library operations. It includes features for cataloging books, tracking loans, and managing user accounts.",
+    stack: [
+      { name: "ReactJs" },
+      { name: "TailwindCSS" },
+      { name: "Java" },
+      { name: "Spring boot" },
+    ],
+    image: "/assets/work/login.jpg",
     live: "",
-    github: "",
+    github: "https://github.com/DevNguyenPhuong/library-management",
   },
   {
     num: "02",
-    category: "frontend",
-    title: "Project 1",
+    category: "fullstack",
+    title: "Wild oasis",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipiscing elit malesuada eu nisi ullamcorper, varius dignissim cum suscipit. Sollicitudin torquent vulputate",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+      "Wild Oasis is a cabin management project designed to streamline the booking and maintenance processes of luxury cabins. It offers an intuitive interface for users to reserve cabins, manage check-ins and check-outs, and track maintenance requests.",
+    stack: [
+      { name: "HTML 5" },
+      { name: "Styled component" },
+      { name: "NextJs" },
+      { name: "ReactJs" },
+    ],
+    image: "/assets/work/wildOasis.jpg",
+    live: "the-wild-oasis-study.vercel.app",
+    github: "https://github.com/DevNguyenPhuong/wild-oasis",
   },
   {
     num: "03",
-    category: "frontend",
-    title: "Project 1",
+    category: "fullstack",
+    title: "Natour",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipiscing elit malesuada eu nisi ullamcorper, varius dignissim cum suscipit. Sollicitudin torquent vulputate",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }],
-    image: "/assets/work/thumb2.png",
+      "Natour is a comprehensive website designed for booking tours, offering users an intuitive interface to explore various travel options. From guided adventures to self-paced explorations, our platform provides detailed itineraries, customer reviews, and easy booking features, ensuring a seamless travel planning experience.",
+    stack: [
+      { name: "HTML 5" },
+      { name: "CSS 3" },
+      { name: "NodeJs" },
+      { name: "ExpressJs" },
+      { name: "MongoDB" },
+    ],
+    image: "/assets/work/natours.jpg",
     live: "",
-    github: "",
+    github: "https://github.com/DevNguyenPhuong/Natour",
   },
   {
     num: "04",
     category: "frontend",
-    title: "Project 1",
+    title: "Virtual gaming",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipiscing elit malesuada eu nisi ullamcorper, varius dignissim cum suscipit. Sollicitudin torquent vulputate",
-    stack: [{ name: "HTML 5" }, { name: "CSS 3" }],
-    image: "/assets/work/thumb3.png",
+      "Virtual Gaming is an engaging website that showcases immersive gaming experiences, utilizing GSAP to deliver stunning animations and a beautiful user interface. Users can enjoy a seamless browsing experience enhanced by dynamic transitions and effects.",
+    stack: [{ name: "TailwindCSS" }, { name: "GSAP" }, { name: "NextJs" }],
+    image: "/assets/work/zentry.jpg",
     live: "",
-    github: "",
+    github: "https://github.com/DevNguyenPhuong/virtual-gaming-GSAP-",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "Omnifood",
+    description:
+      "Omnifood is an inviting landing page designed for food enthusiasts, featuring a visually appealing layout and seamless navigation. The site highlights a variety of delicious meal options, recipes, and dining experiences.",
+    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascrpit" }],
+    image: "/assets/work/Omnifood.jpg",
+    live: "",
+    github: "https://github.com/DevNguyenPhuong/HTML-CSS",
   },
 ];
 
@@ -87,7 +114,7 @@ function Work() {
               </div>
 
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
 
@@ -101,7 +128,7 @@ function Work() {
               </ul>
               <div className="border border-white/20 "></div>
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link target="_blank" href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -114,7 +141,7 @@ function Work() {
                   </TooltipProvider>
                 </Link>
 
-                <Link href={project.github}>
+                <Link target="_blank" href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
